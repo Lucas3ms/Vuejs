@@ -14,17 +14,14 @@ export default {
   data(){
     return{
       titulo:'ProjetoVue',
-      fotos: [
-        {
-          url: "https://tudosobrecachorros.com.br/wp-content/uploads/Beagle-03.jpg",
-          titulofoto: 'Cachorro beagle'
-        },
-        {
-          url:"https://www.gpabrasil.com.br/wp-content/uploads/2018/03/nomes-de-cachorro.jpg",
-          titulofoto: 'Cachorro2'
-        }
-      ]
+      fotos: []
     }
+  },
+
+  created(){
+    this.$http.get('http://localhost:3000/v1/fotos')
+      .then(res => res.json())
+      .then(fotos => this.fotos = fotos, err => console.log(err));
   }
 }
 </script>
