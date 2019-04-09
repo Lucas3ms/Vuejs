@@ -19,8 +19,8 @@ export default {
     padding: 0 auto;
     border: solid 2px grey;
     display: inline-block;
-    margin: 5px;
-    box-shadow: 5px 5px 10px grey;
+    margin: 15px;
+    box-shadow: 10px 5px 10px grey;
     width: 200px;
     height: 100%;
     vertical-align: top;
