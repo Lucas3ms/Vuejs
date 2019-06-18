@@ -5,10 +5,7 @@
           <div class="painel-conteudo" v-show="visible">
             <slot></slot>
           </div>
-        </transition>
-
-
-        
+        </transition>  
     </div>    
 </template>
 
