@@ -1,9 +1,13 @@
 <template>
     <div class="painel"> 
         <h2 class="painel-titulo" @dblclick="visible = !visible">{{ titulo }}</h2>
-        <div class="painel-conteudo" v-show="visible">
-          <slot></slot>
-        </div>
+        <transition name="painel-fade">
+          <div class="painel-conteudo" v-show="visible">
+            <slot></slot>
+          </div>
+        </transition>
+
+
         
     </div>    
 </template>
@@ -49,5 +53,14 @@ export default {
     box-shadow: 5px 5px 5px;
   }
 
+  .painel-fade-enter, .painel-fade-leave-active {
+
+    opacity: 0;
+  }
+  
+  .painel-fade-enter-active, .painel-fade-leave-active {
+
+    transition: .4s;
+  }
 
 </style>
