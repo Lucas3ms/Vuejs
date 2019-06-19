@@ -1,12 +1,12 @@
 <template>
   <div class="corpo">
-    /*hora exibe um componente e hora outro
+
+    <router-view></router-view>
+    
   </div>
 </template>
 
 <script>
-import Painel from './components/shared/painel/Painel.vue';
-import ImagemResponsiva from './components/shared/imagem/imagemResponsiva';
 
 export default {
 
